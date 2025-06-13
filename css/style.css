@@ -1,0 +1,83 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333
+}
+
+/* Color palette */
+:root {
+  --claret: #7A263A;
+  --skyblue: #7aeee8;
+  --pink: #FF66B2;
+  --green: #1ef233;
+  --yellow: #FFD700;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: nspace-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--claret);
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--skyblue);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: var(--claret);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--pink);
+}
