@@ -191,3 +191,58 @@ body{
 .project-links a:hover {
   background-color: var(--pink);
 }
+
+/* Certificates Section */
+.cert-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.cert-section h2 {
+  text-align: center;
+  color: var(--green);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #f8fff8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.cert-card h3 {
+  font-size: 1.3rem;
+  color: var(--claret);
+  margin-bottom: 0.5rem;
+}
+.cert-card p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cert-btn:hover {
+  background-color: var(--claret);
+}
