@@ -61,7 +61,7 @@ header h1 {
 .left-column {
 	background: #f8f9fa;
     padding: 30px;
-    border-right 3px solid #3498db;
+    border-right: 3px solid #3498db;
 }
 
 .right-column {
@@ -135,7 +135,7 @@ header h1 {
 .job {
 	margin-bottom: 25px;
     padding-bottom: 20px;
-    border-bottom 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
 }
 
 .job:last-child {
@@ -215,13 +215,39 @@ header h1 {
     z-index: 1000;
 }
 
-.print-button:hover
+.print-button:hover {
 	background: #2980b9;
 }
 
 /* Print Styles */
 @media print {
-	body 
+    body {
+        background: white;
+    }
+    .cv-container {
+        box-shadow: none;
+        margin: 0;
+        max-width: none;
+    }
+    .print-button {
+        display: none;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 760px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .left-column {
+        border-right: none;
+        border-bottom: 3px solid #3498db;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
 
 
