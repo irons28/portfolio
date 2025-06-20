@@ -124,7 +124,7 @@ header h1 {
     position: relative;
 }
 
-.certification::brfore {
+.certification::before {
 	content: '✓';
     position: absolute;
     left: 0;
@@ -163,7 +163,7 @@ header h1 {
 	margin-top: 8px;
 }
 
-.job description ul {
+.job-description ul {
 	list-style: none;
     padding-left: 0;
 }
