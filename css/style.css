@@ -239,26 +239,35 @@ body {
   color: var(--text);
 }
 
-.cert-btn {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  background-color: var(--accent);
-  color: var(--light);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.cv-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.cert-btn:hover {
-  background-color: var(--primary);
+.cv-links .cert-btn {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent);
   color: var(--light);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  tansition: background-color 0.3s ease;
+}
+
+.cv-links .cert-btn:hover {
+  background-color: #007d8a;
 }
 
 /* Contact Section */
 .contact-section {
   padding: 4rem 2rem;
-  background-color: var(--primary);
+  background-color: var(--primary)
   color: var(--light);
   text-align: center;
 }
@@ -305,4 +314,3 @@ body {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-}
