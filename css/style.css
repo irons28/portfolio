@@ -257,7 +257,7 @@ body {
   text-decoration: none;
   border-radius: 0.5rem;
   font-weight: bold;
-  tansition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .cv-links .cert-btn:hover {
@@ -267,7 +267,7 @@ body {
 /* Contact Section */
 .contact-section {
   padding: 4rem 2rem;
-  background-color: var(--primary)
+  background-color: var(--primary);
   color: var(--light);
   text-align: center;
 }
@@ -314,3 +314,4 @@ body {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
