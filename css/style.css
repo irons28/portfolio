@@ -264,6 +264,33 @@ body {
   background-color: #007d8a;
 }
 
+/* PDF Presentation Button with Icon */
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: var(--accent); /* matching your cert-btn bg */
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cert-btn:hover {
+  background-color: #007d8a; /* consistent hover */
+}
+
+.pdf-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* Contact Section */
 .contact-section {
   padding: 4rem 2rem;
