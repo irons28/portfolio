@@ -200,9 +200,10 @@ body {
 }
 
 .pdf-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 6px;
 }
 
@@ -270,6 +271,7 @@ body {
   font-weight: bold;
   transition: background-color 0.3s ease;
   font-weight: bold;
+  line-height: 1;
 }
 
 .cert-btn:hover {
