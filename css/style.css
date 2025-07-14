@@ -183,7 +183,9 @@ body {
 }
 
 .project-links a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   background-color: var(--primary);
@@ -196,6 +198,13 @@ body {
 .project-links a:hover {
   background-color: var(--accent);
   color: var(--light);
+}
+
+.pdf-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Certificates Section */
@@ -251,17 +260,18 @@ body {
   margin-top: 1rem;
 }
 
+/* Display PDF icon in cert-btn as well */
 .cert-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 0.5rem 1.2rem;
   background-color: var(--accent);
   color: var(--light);
-  text-align: center;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  font-weight: bold;
 }
 
 .cert-btn:hover {
