@@ -200,11 +200,10 @@ body {
   color: var(--light);
 }
 
+/* FIXED: Simplified PDF icon (no redundant margins/alignment) */
 .pdf-icon {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 /* Certificates Section */
@@ -248,19 +247,6 @@ body {
   color: var(--text);
 }
 
-.cert-btn:hover {
-  background-color: var(--primary);
-  color: var(--light);
-}
-
-.cv-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-/* Display PDF icon in cert-btn as well */
 .cert-btn {
   display: inline-flex;
   align-items: center;
