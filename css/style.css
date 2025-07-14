@@ -239,20 +239,32 @@ body {
   color: var(--text);
 }
 
-.cert-btn {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  background-color: var(--accent);
-  color: var(--light);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
 .cert-btn:hover {
   background-color: var(--primary);
   color: var(--light);
+}
+
+.cv-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--accent);
+  color: var(--light);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.cert-btn:hover {
+  background-color: #007d8a; /* Darker teal for hover effect */
 }
 
 /* Contact Section */
