@@ -200,9 +200,9 @@ body {
 }
 
 .pdf-icon {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
   margin-right: 6px;
 }
 
