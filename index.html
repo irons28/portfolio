@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Collen | Data Analyst & Web Dev</title>
+    <meta name="description" content="Portfolio of Ben Collen - Data Analyst & Web Developer specializing in R, SQL, and JavaScript">
+    <meta property="og:title" content="Ben Collen | Data Analyst & Web Developer">
+    <meta property="og:image" content="https://irons28.github.io/portfolio/assets/ben-placeholder.jpg">
+    <title>Ben Collen | Data Analyst & Web Developer</title>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="assets/ben-placeholder.jpg" as="image">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/favicon.ico">
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    
     <header>
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Main navigation">
         <h1 class="logo">Ben Collen</h1>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -26,52 +33,53 @@
       </section>
     </header>
 
-    <main>
-      <!-- Sections will be built out here -->
-       <section id="about" class="about-section">
+    <main id="main">
+      <section id="about" class="about-section">
         <h2>About Me</h2>
         <div class="about-container">
-          <img src="assets/ben-placeholder.jpg" alt="Ben Collen photo" class="about-photo">
+          <img src="assets/ben-placeholder.jpg" alt="Ben Collen portrait photo" class="about-photo" loading="lazy">
           <div class="about-text">
-            <p>I'm Ben, an aspiring data analyst and web developer based in South East England.  After completing the Google Data Analytics Certificate and several coding courses through freeCodeCamp and Coursera, I've been combining my love for numbers with my passion for building digital things.</p>
-            <p>My goal is to create smart, user-friendly websites and data-driven tools - and eventually work independently, freelancing or building my own apps.  I'm confident with tools like R, SQL, and Python, and I'm working on my front-end development skills using HTML, CSS and JavaScript.</p>
+            <p>I'm Ben, an aspiring data analyst and web developer based in South East England. After completing the Google Data Analytics Certificate and several coding courses through freeCodeCamp and Coursera, I've been combining my love for numbers with my passion for building digital things.</p>
+            <p>My goal is to create smart, user-friendly websites and data-driven tools - and eventually work independently, freelancing or building my own apps. I'm confident with tools like R, SQL, and Python, and I'm working on my front-end development skills using HTML, CSS and JavaScript.</p>
             <p>When I'm not coding, you'll probably find me spending quality time with family, watching West Ham or planning my next learning milestone.</p>
           </div>
         </div>
-       </section>
+      </section>
 
-       <section id="projects" class="projects-section">
+      <section id="projects" class="projects-section">
         <h2>My Projects</h2>
         <div class="projects-container">
 
-          <!-- Project 1 -->
-           <article class="project-card">
-            <img src="assets/cyclistic_slide1.png" alt="Cyclistic Case Study">
-            <h3>Cyclistic Case Study</h3>
-            <p>Google Data Analytics capstone exploring ride trends using R, SQL, and Tableau.</p>
+          <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <img src="assets/cyclistic_slide1.png" alt="Cyclistic bike share analysis dashboard" loading="lazy">
+            <h3 itemprop="name">Cyclistic Case Study</h3>
+            <p itemprop="description">Google Data Analytics capstone exploring ride trends using R, SQL, and Tableau.</p>
             <p class="tools">Tools: R, SQL, Tableau</p>
             <div class="project-links">
-              <a href="https://github.com/irons28/cyclistic_capstone" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="assets/Cyclistic_Capstone_Presentation.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn">
-                  <img src="assets/icon-pdf.svg" alt="PDF icon" class="pdf-icon"/>
-                  View Presentation
+              <a href="https://github.com/irons28/cyclistic_capstone" target="_blank" rel="noopener noreferrer" aria-label="View Cyclistic project on GitHub">
+                GitHub
+              </a>
+              <a href="assets/Cyclistic_Capstone_Presentation.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn" aria-label="View Cyclistic Presentation (PDF)">
+                <img src="assets/icon-pdf.svg" alt="" class="pdf-icon" aria-hidden="true">
+                View Presentation
               </a>
             </div>
-           </article>
+          </article>
 
-           <!-- Project 2 -->
-            <article class="project-card">
-              <img src="assets/project2.png" alt="Web Portfolio Site">
-              <h3>Portfolio Website</h3>
-              <p>This is the portfolio you're viewing — built from scratch using HTML, CSS, and GitHub Pages.</p>
-              <p class="tools">Tools: HTML, CSS, GitHub Pages</p>
-              <div class="project-links">
-                <a href="https://github.com/irons28/portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://irons28.github.io/portfolio" target="_blank" rel="noopener noreferrer">Live</a>
-              </div>
-            </article>
-
-            <!-- Add more project cards as needed -->
+          <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <img src="assets/project2.png" alt="Portfolio website screenshot" loading="lazy">
+            <h3 itemprop="name">Portfolio Website</h3>
+            <p itemprop="description">This is the portfolio you're viewing — built from scratch using HTML, CSS, and GitHub Pages.</p>
+            <p class="tools">Tools: HTML, CSS, GitHub Pages</p>
+            <div class="project-links">
+              <a href="https://github.com/irons28/portfolio" target="_blank" rel="noopener noreferrer" aria-label="View portfolio source code">
+                GitHub
+              </a>
+              <a href="https://irons28.github.io/portfolio" target="_blank" rel="noopener noreferrer" aria-label="View live portfolio">
+                Live
+              </a>
+            </div>
+          </article>
 
         </div>
       </section>
@@ -80,30 +88,29 @@
         <h2>Certificates & CV</h2>
         <div class="cert-container">
 
-          <!-- CV Download -->
-           <div class="cert-card">
+          <div class="cert-card">
             <h3>Download My CV</h3>
             <p>A modern 2-column layout CV showing my skills, experience, and education.</p>
             <a href="cv.html" class="cert-btn">View Online CV</a>
-           </div>
+          </div>
 
-           <!-- Certificate 1 -->
-            <div class="cert-card">
-              <h3>Google Data Analytics Certificate</h3>
-              <img src="assets/google-data-analytics-badge.png" alt="Google Data Analytics Badge" class="cert-badge">
-              <p>Completed 8-Course professional certificate focused on data cleaning, analysis & visualization.</p>
-              <a href="https://www.credly.com/badges/5baee7ca-6f95-4409-af74-e814e9c8d3a4/public_url" target="_blank" rel="noopener noreferrer" class="cert-btn">View Credential</a>
-            </div>
+          <div class="cert-card">
+            <h3>Google Data Analytics Certificate</h3>
+            <img src="assets/google-data-analytics-badge.png" alt="Google Data Analytics certification badge" class="cert-badge" loading="lazy">
+            <p>Completed 8-Course professional certificate focused on data cleaning, analysis & visualization.</p>
+            <a href="https://www.credly.com/badges/5baee7ca-6f95-4409-af74-e814e9c8d3a4/public_url" target="_blank" rel="noopener noreferrer" class="cert-btn">
+              View Credential
+            </a>
+          </div>
 
-            <!-- Certificate 2 -->
-             <div class="cert-card">
-              <h3>freeCodeCamp - Responsive Web Design</h3>
-              <p>Built responsive layouts using HTML & CSS, including Flexbox and Grid systems.</p>
-              <a href="https://www.freecodecamp.org/certification/Bencollen/responsive-web-design" target="_blank" rel="noopener noreferrer" class="cert-btn">View Certificate</a>
-             </div>
+          <div class="cert-card">
+            <h3>freeCodeCamp - Responsive Web Design</h3>
+            <p>Built responsive layouts using HTML & CSS, including Flexbox and Grid systems.</p>
+            <a href="https://www.freecodecamp.org/certification/Bencollen/responsive-web-design" target="_blank" rel="noopener noreferrer" class="cert-btn">
+              View Certificate
+            </a>
+          </div>
 
-             <!-- Add more certificates as needed -->
-              
         </div>
       </section>
       
@@ -113,15 +120,36 @@
           Want to collaborate, hire me, or just say hi? Reach out via the platforms below:
         </p>
         <div class="social-links">
-          <a href="https://github.com/irons28" target="_blank" rel="noopener noreferrer" class="social-icon github">GitHub</a>
-          <a href="https://www.linkedin.com/in/ben-collen-234566a1" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">LinkedIn</a>
-          <a href="https://www.kaggle.com/bencollen" target="_blank" rel="noopener noreferrer" class="social-icon kaggle">Kaggle</a>
+          <a href="mailto:ben.collen@me.com" class="email-btn" aria-label="Email Ben Collen">
+            Email Me
+          </a>
+          <a href="https://github.com/irons28" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Ben's GitHub profile">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/ben-collen-234566a1" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Ben's LinkedIn profile">
+            LinkedIn
+          </a>
+          <a href="https://www.kaggle.com/bencollen" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Ben's Kaggle profile">
+            Kaggle
+          </a>
         </div>
       </section>
-      
-      <footer class="site-footer">
-        <p>&copy 2025 Ben Collen. All rights reserved.</p>
-		  </footer>
     </main>
+    
+    <footer class="site-footer">
+      <p>&copy; <span id="year">2025</span> Ben Collen. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Auto-update copyright year
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Add focus styles for keyboard navigation
+      document.addEventListener('keyup', function(e) {
+        if (e.keyCode === 9) {
+          document.documentElement.classList.add('keyboard-nav');
+        }
+      });
+    </script>
   </body>
 </html>
