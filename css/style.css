@@ -185,7 +185,7 @@ body {
 .project-links a {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   background-color: var(--primary);
@@ -202,8 +202,8 @@ body {
 
 /* FIXED: Simplified PDF icon (no redundant margins/alignment) */
 .pdf-icon {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
 }
 
 /* Certificates Section */
