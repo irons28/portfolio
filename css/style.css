@@ -175,7 +175,7 @@ body {
 /* ===== PROJECTS GRID ===== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -191,11 +191,6 @@ body {
   transition: var(--transition);
 }
 
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
 .project-img {
   width: 100%;
   height: auto;
@@ -203,34 +198,57 @@ body {
   margin-bottom: 1rem;
 }
 
+.project-card:hover,
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 .btn-group {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  justify-content: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
   margin-top: auto;
 }
 
 .btn-group .btn {
-  flex: 1 1 0;
+  flex: 0 0 auto;
+  white-space: nowrap;
   text-align: center;
 }
 
-.project-btn {
-  background: var(--accent);
-  color: var(--light);
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition);
-  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.project-btn {
+  background: var(--accent);
+  color: var(--light);
   width: 100%;
 }
 
 .project-btn:hover {
   background: var(--accent-dark);
-  transform: translateY(-2);
+  transform: translateY(-2px);
+}
+
+.data-btn {
+  background: var(--data-color);
+  color: white;
+}
+
+.data-btn:hover {
+  background: #c31d6c;
 }
 
 /* ===== CV SECTION ===== */
@@ -266,7 +284,6 @@ body {
   bottom: 1rem;
   left: 1rem;
   display: flex;
-  flex-direction: row;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
@@ -279,7 +296,7 @@ body {
   text-decoration: none;
 }
 
-/* ===== CERTIFICATE SECTION ===== */
+/* ===== CERTIFICATIONS ===== */
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -299,42 +316,26 @@ body {
   max-width: 300px;
 }
 
-.cert-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
 .cert-img {
   width: 100%;
   max-width: 180px;
   height: auto;
   border-radius: 4px;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
-/* ===== CONTACT ===== */
+/* ===== CONTACT SECTION ===== */
 .contact-links {
   background: var(--primary);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
-  margin: 0.5rem;
+  padding: 2rem;
 }
 
 .github-btn { background: #333; color: white; }
-.linkedin-btn { background: #0a66c2; color: white }
+.linkedin-btn { background: #0a66c2; color: white; }
 .kaggle-btn { background: #20deff; color: white; }
 .email-btn { background: var(--accent); color: white; }
 
@@ -343,8 +344,16 @@ body {
   transform: translateY(-2px);
 }
 
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--light);
+}
+
 /* ===== RESPONSIVE ===== */
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -352,10 +361,12 @@ body {
 
   .hero-content {
     flex-direction: column;
+    text-align: center;
   }
 
   .btn-group {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .btn-group .btn {
