@@ -66,6 +66,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -119,12 +121,18 @@ body {
 .accent-btn {
   background: var(--primary);
   color: var(--light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition);
 }
+
 .accent-btn:hover {
   background: var(--accent-dark);
 }
 
-/* ===== SECTION GENERAL ===== */
+/* ===== SECTION ===== */
 .section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -176,17 +184,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  min-height: 500px;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1rem;
+  border-radius: 12px;
+  gap: 1rem;
   box-shadow: var(--shadow);
   transition: var(--transition);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-img {
@@ -198,14 +205,15 @@ body {
 
 .btn-group {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: auto;
 }
 
 .btn-group .btn {
-  flex: 0 0 auto;
+  flex: 1 1 0;
+  text-align: center;
 }
 
 .project-btn {
@@ -215,13 +223,14 @@ body {
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
-  white-space: nowrap;
   transition: var(--transition);
+  display: inline-block;
+  width: 100%;
 }
 
 .project-btn:hover {
   background: var(--accent-dark);
-  transform: translateY(-2px);
+  transform: translateY(-2);
 }
 
 /* ===== CV SECTION ===== */
@@ -248,7 +257,8 @@ body {
 .cv-image {
   width: 100%;
   height: auto;
-  display: block;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 .cv-overlay {
@@ -256,33 +266,53 @@ body {
   bottom: 1rem;
   left: 1rem;
   display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .cv-btn {
   background: var(--accent);
   color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* ===== CERTIFICATE SECTION ===== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 }
 
 .cert-card {
-  background: var (--highlight);
+  background: var(--highlight);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 300px;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 .cert-img {
   width: 100%;
   max-width: 180px;
   height: auto;
-  margin-bottom: 1 rem;
   border-radius: 4px;
+  margin-bottom: 1rem
 }
 
-/* ===== CONTACT LINKS ===== */
+/* ===== CONTACT ===== */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -294,7 +324,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
@@ -303,8 +333,8 @@ body {
 }
 
 .github-btn { background: #333; color: white; }
-.linkedin-btn { background: #0a66c2; color: white; }
-.kaggle-btn { background: #20deff; color: #333; }
+.linkedin-btn { background: #0a66c2; color: white }
+.kaggle-btn { background: #20deff; color: white; }
 .email-btn { background: var(--accent); color: white; }
 
 .btn:hover {
@@ -312,27 +342,30 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background: var(--primary);
-  color: var(--light);
-}
-
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .hero-content {
     flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+
+  .cv-overlay {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
   }
 }
