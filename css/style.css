@@ -326,7 +326,6 @@ body {
 
 /* ===== CONTACT SECTION ===== */
 .contact-links {
-  background: var(--primary);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
