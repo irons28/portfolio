@@ -9,323 +9,154 @@
   --highlight: #FFF9F1;
   --light: #ffffff;
 
-  --web-color: #4cc9f0;
-  --data-color: #f72585;
-
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
 }
 
-/* ===== BASE STYLES ===== */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background);
-  padding-top: 70px;
+  color: var(--text);
+  line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
-.header {
-  position: fixed;
+/* ===== HEADER & NAV ===== */
+header {
+  position: sticky;
   top: 0;
   width: 100%;
-  background: var(--primary);
-  color: var(--light);
+  background: var(--light);
+  box-shadow: var(--shadow);
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== NAVIGATION ===== */
-.navbar {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: auto;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--light);
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.nav-links a {
+nav a {
   text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  color: var(--text);
+  margin-left: 1rem;
+  font-weight: 600;
 }
 
-.nav-links a:hover {
-  color: var(--light);
+nav a:hover {
+  color: var(--accent-dark);
 }
 
-/* ===== HERO SECTION ===== */
-.hero-section {
-  background: var(--accent);
+/* ===== HERO ===== */
+.hero {
   padding: 4rem 2rem;
-}
-
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.hero-img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--primary);
-  box-shadow: var(--shadow);
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  color: var(--light);
-  margin-bottom: 1rem;
-}
-
-.accent-btn {
-  background: var(--primary);
-  color: var(--light);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.accent-btn:hover {
-  background: var(--accent-dark);
-}
-
-/* ===== SECTION ===== */
-.section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.section-title {
+  background: var(--highlight);
   text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
   color: var(--primary);
-}
-
-.section-title span {
-  background: var(--background);
-  padding: 0 1.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--accent);
-  z-index: 0;
-}
-
-.web-section .section-title span {
-  color: var(--web-color);
-}
-
-.data-section .section-title span {
-  color: var(--data-color);
-}
-
-/* ===== PROJECTS GRID ===== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: var(--highlight);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 1rem;
-  border-radius: 12px;
-  gap: 1rem;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
   margin-bottom: 1rem;
 }
 
-.project-card:hover,
-.cert-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-light);
 }
 
-.btn-group {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+.hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 1.5rem;
 }
 
-.btn-group .btn {
-  flex: 0 1 auto;
-  padding: 0.6rem 1rem;
-  white-space: nowrap;
+/* ===== SECTIONS ===== */
+section {
+  padding: 4rem 2rem;
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
-  margin: 0.5rem 0;
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  text-align: center;
 }
 
-.project-btn {
-  background: var(--accent);
-  color: var(--light);
-  width: 100%;
-}
-
-.project-btn:hover {
-  background: var(--accent-dark);
-  transform: translateY(-2px);
-}
-
-.data-btn {
-  background: var(--data-color);
-  color: white;
-}
-
-.data-btn:hover {
-  background: #c31d6c;
-}
-
-/* ===== CV SECTION ===== */
-.cv-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.cv-card {
-  background: var(--highlight);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  max-width: 800px;
-  width: 100%;
-}
-
-.cv-preview {
-  position: relative;
-}
-
-.cv-image {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-}
-
-.cv-overlay {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.cv-btn {
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-/* ===== CERTIFICATIONS ===== */
-.cert-grid {
+/* ===== GRID LAYOUT FOR CARDS ===== */
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   justify-items: center;
 }
 
-.cert-card {
+/* ===== SHARED PORTFOLIO CARD STYLE ===== */
+.portfolio-card {
   background: var(--highlight);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: var(--radius);
   text-align: center;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cert-card:hover,
-.project-card:hover {
+.portfolio-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+.portfolio-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-dark);
+}
+
+.portfolio-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+}
+
+/* ===== CERTIFICATION IMAGE STYLES ===== */
 .cert-img {
   width: 100%;
   max-width: 180px;
@@ -339,59 +170,12 @@ body {
   height: auto;
 }
 
-/* ===== CONTACT SECTION ===== */
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-}
-
-.github-btn { background: #333; color: white; }
-.linkedin-btn { background: #0a66c2; color: white; }
-.kaggle-btn { background: #20deff; color: white; }
-.email-btn { background: var(--accent); color: white; }
-
-.btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
-}
-
 /* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 1rem;
+footer {
   background: var(--primary);
-  color: var(--light);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .btn-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn-group .btn {
-    width: 100%;
-  }
-
-  .cv-overlay {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    justify-content: center;
-  }
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
 }
