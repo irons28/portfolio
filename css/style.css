@@ -132,7 +132,7 @@ body {
   background: var(--accent-dark);
 }
 
-/* ===== SECTION ===== */
+/* ===== SECTION WRAPPER ===== */
 .section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -172,15 +172,17 @@ body {
   color: var(--data-color);
 }
 
-/* ===== PROJECTS GRID ===== */
-.projects-grid {
+/* ===== GRID SHARED ===== */
+.projects-grid,
+.cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   justify-items: center;
 }
 
-.project-card {
+/* ===== SHARED CARD STYLE ===== */
+.portfolio-card {
   background: var(--highlight);
   padding: 1.5rem;
   border-radius: 8px;
@@ -193,18 +195,36 @@ body {
   transition: var(--transition);
 }
 
-.project-img {
+.portfolio-card:hover {
+  transform: translateY(-3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PROJECT / CERT IMAGE ===== */
+.project-img,
+.cert-img {
   width: 100%;
-  max-width: 100%;
+  max-width: 180%;
   height: auto;
   border-radius: 4px;
   margin-bottom: 1rem;
 }
 
-.project-card:hover,
-.cert-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+/* ===== BUTTONS & GROUPING ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  margin: 0.5rem 0;
+}
+.btn:hover {
+  filter: brighhtness(1.1);
+  transform: translateY(-2px);
 }
 
 .btn-group {
@@ -221,19 +241,6 @@ body {
   text-align: center;
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
-  margin: 0.5rem 0;
-}
-
 .project-btn {
   background: var(--accent);
   color: var(--light);
@@ -242,7 +249,6 @@ body {
 
 .project-btn:hover {
   background: var(--accent-dark);
-  transform: translateY(-2px);
 }
 
 .data-btn {
@@ -254,8 +260,13 @@ body {
   background: #c31d6c;
 }
 
+.cert-btn {
+  background: var(--accent);
+  colour: white;
+}
+
 /* ===== CV SECTION ===== */
-.cv-container {
+.cv-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -294,40 +305,12 @@ body {
 .cv-btn {
   background: var(--accent);
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1 rem;
   border-radius: 4px;
   text-decoration: none;
 }
 
-/* ===== CERTIFICATIONS ===== */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-.cert-card {
-  background: var(--highlight);
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 300px;
-}
-
-.cert-img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-/* ===== CONTACT SECTION ===== */
+/* ===== CONTACT ===== */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -336,15 +319,10 @@ body {
   padding: 2rem;
 }
 
-.github-btn { background: #333; color: white; }
+.github-btn { background: #333: color: white; }
 .linkedin-btn { background: #0a66c2; color: white; }
 .kaggle-btn { background: #20deff; color: white; }
 .email-btn { background: var(--accent); color: white; }
-
-.btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
-}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -368,7 +346,7 @@ body {
 
   .btn-group {
     flex-direction: column;
-    align-items: stretch;
+    align_items: stretch;
   }
 
   .btn-group .btn {
@@ -379,7 +357,7 @@ body {
     flex-direction: column;
   }
 
-  .nav-links {
+  .nav-lights {
     justify-content: center;
   }
 }
