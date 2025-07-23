@@ -1,147 +1,399 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Collen | Data Analyst & Web Developer</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=inter:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Sticky Navigation Bar -->
-     <header class="header">
-      <nav class="navbar">
-        <div class="logo">Ben Collen</div>
-        <ul class="nav-links">
-          <li><a href="#web-dev"><i class="fas fa-code"></i> Web Dev</a></li>
-          <li><a href="#data-analyst"><i class="fas fa-chart-bar"></i> Data Analyst</a></li>
-          <li><a href="#cv"><i class="fas fa-file-user"></i> CV</a></li>
-          <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-      </nav>
-     </header>
+/* ===== VARIABLES ===== */
+:root {
+  --primary: #2C3E50;
+  --accent: #0097A7;
+  --accent-dark: #007288;
+  --text: #333333;
+  --text-light: #666666;
+  --background: #F4F4F4;
+  --highlight: #FFF9F1;
+  --light: #ffffff;
 
-     <main>
-      <!-- Hero Section -->
-       <section class="hero-section">
-        <div class="hero-content">
-          <img src="assets/ben-profile.jpg" alt="Ben Collen" class="hero-img">
-          <div class="hero-text">
-            <h1>Hi, I'm Ben Collen</h1>
-            <p>I'm a self-taught data analyst and web developer based in the UK.  I enjoy turning data into insights and building sleek, functional websites.  Welcome to my portfolio.</p>
-            <a href="#contact" class="btn accent-btn">Get in touch</a>
-          </div>
-        </div>
-      </section>
+  --web-color: #4cc9f0;
+  --data-color: #f72585;
 
-      <!-- Web Development Section -->
-       <section id="web-dev" class="section web-section">
-        <h2 class="section-title"><span>Web Development</span></h2>
-        <div class="projects-grid">
-          <!-- Project cards will go here -->
-           <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Personal site to showcase my web and data projects. Built with HTML, CSS, and JavaScript.</p>
-            <a href="https://irons28.github.io/portfolio/" class="btn project-btn" target="_blank">View Project</a>
-           </div>
-        </div>
-       </section>
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  
+}
 
-       <!-- Data Analyst Section -->
-       <section id="data-analyst" class="section data-section">
-        <h2 class="section-title"><span>Data Analyst</span></h2>
-        <div class="projects-grid">
-          <!-- Project cards will go here -->
-           <div class="project-card data-project">
-            <img src="assets/project-image.jpg" alt="project thumbnail" class="project-img">
-            <h3>Cyclistic Capstone Case Study</h3>
-            <p>Analyzed Divvy bike-share data using R.  Identified trends to support marketing strategies.</p>
-            <div class="btn-group">
-              <a href="link-to-case-study" class="btn data-btn" target="_blank"><i class="fas fa-chart-line"></i> View Case Study</a>
-              <a href="link-to-presentation" class="btn data-btn" target="_blank"><i class=fas fa-slideshare"></i> View Presentation</a>
-            </div>
-           </div>
-       </section>
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-       <!-- CV Section -->
-<section id="cv" class="section cv-section">
-  <h2 class="section-title"><span>My CV</span></h2>
-  <div class="cv-container">
-    <div class="cv-card">
-      <div class="cv-preview">
-        <img src="assets/cv-preview.jpg" alt="CV Preview" class="cv-image">
-        <div class="cv-overlay">
-          <a href="cv.html" target="_blank" class="btn cv-btn">
-            <i class="fas fa-eye"></i> View Full CV
-          </a>
-          <a href="assets/ben-collen-cv.pdf" download class="btn cv-btn">
-            <i class="fas fa-file-pdf"></i> Download PDF
-          </a>
-        </div>
-      </div>
-      <div class="cv-details">
-        <h3>Professional Summary</h3>
-        <ul class="cv-highlights">
-          <li><i class="fas fa-check"></i> Data Analysis (Python, R, SQL)</li>
-          <li><i class="fas fa-check"></i> Web Development (HTML/CSS/JS)</li>
-          <li><i class="fas fa-check"></i> Data Visualization (Tableau,)</li>
-          <li><i class="fas fa-check"></i> Machine Learning Fundamentals</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+html {
+  scroll-behavior: smooth;
+}
 
-       <!-- Certifications Section -->
-       <section id="certifications" class="section cert-section">
-        <h2 class="section-title"><span>Certifications</span></h2>
-        <div class="cert-grid">
-          <!-- Certification cards will go here -->
-           <div class="cert-grid">
-            <div class="cert-card">
-              <img src="assets/Google Data Analytics Certificate.pdf" alt="Google Data Analytics Certificate" class="cert-img small-cert">
-              <p><strong>Google Data Analytics</strong><br/>Coursera / Credly</p>
-              <a href="https://www.credly.com/badges/your-badge" taget="_blank" class="btn cert-btn">View Credential</a>
-            </div>
-            <div class="cert-card">
-              <img src="assets/freecodecamp-cert.png" alt="freeCodeCamp Certification">
-              <p><strong>Responsive Web Design</strong><br/>freeCodeCamp</p>
-              <a href="https://www.freecodecamp.org/certification/irons28/..." target="_blank" class="btn cert-btn">View Certificate</a>
-            </div>
-           </div>
-        </div>
-       </section>
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+  padding-top: 70px;
+}
 
-       <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-          <h2 class="section-title"><span>Get In Touch</span></h2>
-          <div class="contact-links">
-            <a href="https://github.com/irons28" class="btn github-btn">
-              <i class="fas fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/in/ben-collen-234566a1" class="btn linkedin-btn">
-              <i class="fas fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://kaggle.com/bencollen" class="btn kaggle-btn">
-              <i class="fas fa-kaggle"></i> Kaggle
-            </a>
-            <a href="mailto:ben.collen@me.com" class="btn email-btn">
-              <i class="fas fa-envelope"></i> Email Me
-            </a>
-          </div>
-        </section>
-     </main>
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--primary);
+  color: var(--light);
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
 
-     <footer class="footer">
-      <p>&copy; <span id="year"></span> Ben Collen. All rights reserved.</p>
-     </footer>
+/* ===== NAVIGATION ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
 
-     <script>
-      // Auto-update year and add scroll effect to navbar
-      document.getElementById('year').textContent =  new Date().getFullYear();
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light);
+}
 
-     </script>
-  </body>
-</html>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links a:hover {
+  color: var(--light);
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  background: var(--accent);
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+.accent-btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.accent-btn:hover {
+  background: var(--accent-dark);
+}
+
+/* ===== SECTION ===== */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--primary);
+}
+
+.section-title span {
+  background: var(--background);
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  z-index: 0;
+}
+
+.web-section .section-title span {
+  color: var(--web-color);
+}
+
+.data-section .section-title span {
+  color: var(--data-color);
+}
+
+/* ===== PROJECTS GRID ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--highlight);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.project-card:hover,
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-group .btn {
+  flex: 0 1 auto;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  margin: 0.5rem 0;
+}
+
+.project-btn {
+  background: var(--accent);
+  color: var(--light);
+  width: 100%;
+}
+
+.project-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.data-btn {
+  background: var(--data-color);
+  color: white;
+}
+
+.data-btn:hover {
+  background: #c31d6c;
+}
+
+/* ===== CV SECTION ===== */
+.cv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cv-card {
+  background: var(--highlight);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+}
+
+.cv-preview {
+  position: relative;
+}
+
+.cv-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.cv-overlay {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cv-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.cert-card {
+  background: var(--highlight);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-card:hover,
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.cert-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.small-cert {
+  max-width: 140px;
+  height: auto;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.github-btn { background: #333; color: white; }
+.linkedin-btn { background: #0a66c2; color: white; }
+.kaggle-btn { background: #20deff; color: white; }
+.email-btn { background: var(--accent); color: white; }
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--light);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+
+  .cv-overlay {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+}
+a
