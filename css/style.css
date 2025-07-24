@@ -206,6 +206,8 @@ body {
   width: 100%;
   max-width: 180%;
   height: auto;
+  object-fit: contain;
+  image-rendering: crisp-edges;
   border-radius: 4px;
   margin-bottom: 1rem;
 }
