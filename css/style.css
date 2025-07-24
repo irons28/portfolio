@@ -262,7 +262,7 @@ body {
 
 .cert-btn {
   background: var(--accent);
-  colour: white;
+  color: white;
 }
 
 /* ===== CV SECTION ===== */
@@ -319,7 +319,7 @@ body {
   padding: 2rem;
 }
 
-.github-btn { background: #333: color: white; }
+.github-btn { background: #333; color: white; }
 .linkedin-btn { background: #0a66c2; color: white; }
 .kaggle-btn { background: #20deff; color: white; }
 .email-btn { background: var(--accent); color: white; }
@@ -346,7 +346,7 @@ body {
 
   .btn-group {
     flex-direction: column;
-    align_items: stretch;
+    align-items: stretch;
   }
 
   .btn-group .btn {
