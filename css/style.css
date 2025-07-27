@@ -178,7 +178,10 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 /* ===== SHARED CARD STYLE ===== */
@@ -214,6 +217,8 @@ body {
 
 /* ===== BUTTONS & GROUPING ===== */
 .btn {
+  background: var(--accent);
+  color: white;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -225,7 +230,8 @@ body {
   margin: 0.5rem 0;
 }
 .btn:hover {
-  filter: brighhtness(1.1);
+  background: var(--accent-dark);
+  filter: brightness(1.1);
   transform: translateY(-2px);
 }
 
@@ -260,6 +266,14 @@ body {
 
 .data-btn:hover {
   background: #c31d6c;
+}
+.web-btn {
+  background: var(--web-color);
+  color: white;
+}
+
+.web-btn:hover {
+  background: #3a9bbf;
 }
 
 .cert-btn {
@@ -347,6 +361,23 @@ body {
 .cv-highlights i {
   color: var(--accent);
   margin-right: 0.5rem;
+}
+
+.project-card {
+  background: var(--highlight);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
 /* ===== CONTACT ===== */
