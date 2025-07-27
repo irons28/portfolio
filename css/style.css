@@ -277,11 +277,13 @@ body {
 
 .cv-card {
   background: var(--highlight);
+  border: 1px solid #ddd;
+  padding: 1rem;
   border-radius: 8px;
+  text-align: center;
   box-shadow: var(--shadow);
-  overflow: hidden;
-  max-width: 800px;
-  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .cv-preview {
@@ -291,10 +293,15 @@ body {
 .cv-image {
   width: 100%;
   height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  display: block;
-  margin: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.cv-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .cv-overlay {
@@ -307,11 +314,39 @@ body {
 }
 
 .cv-btn {
-  background: var(--accent);
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background-color: var(--accent);
   color: white;
-  padding: 0.5rem 1rem;
+  border: none;
   border-radius: 4px;
+  font-weight: bold;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.cv-details {
+  margin-top: 1rem;
+}
+
+.cv-highlights {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.cv-highlihgts li {
+  margin-bottom: 0.4rem;
+}
+
+.cv-highlights i {
+  color: var(--accent);
+  margin-right: 0.5rem;
 }
 
 /* ===== CONTACT ===== */
