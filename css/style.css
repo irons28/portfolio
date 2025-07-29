@@ -39,15 +39,26 @@ input, button, textarea, select{
   --background: hsl(0, 0%, 96%);
   --highlight: hsl(40, 100%, 97%);
   --light: hsl(0, 0%, 100%);
-
-  --web-color: #4cc9f0;
-  --data-color: #f72585;
+  --web-color: hsl(195, 92%, 63%);
+  --data-color: hsl(328, 94%, 56%);
 
   --shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
 
-/* ===== BASE STYLES FOR INTERACTIVE ELEMENTS ===== */
+/* ===== BASE STYLES ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+  padding-top: 4.375rem;
+}
 
 a {
   color: var(--accent);
@@ -66,7 +77,8 @@ button:focus {
 }
 
 button {
-  padding: 0.6rem 1.2rem;
+  padding-block: 0.6rem;
+  padding-inline: 1.2rem;
   background-color: var(--accent);
   color: var(--light);
   border: none;
@@ -79,28 +91,14 @@ button:hover {
   background-color: var(--accent-dark);
 }
 
-/* ===== BASE STYLES ===== */
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background-color: var(--background);
-  padding-top: 4.375rem;
-}
-
 /* ===== HEADER ===== */
 .header {
   position: sticky;
-  inset: 0 0 auto 0;
+  inset-block-start: 0;
+  z-index: 1000;
   background: var(--primary);
   color: var(--light);
-  z-index: 1000;
-  box-shadow: 0.125rem 0.375rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.05);
 }
 
 /* ===== NAVIGATION ===== */
@@ -121,7 +119,6 @@ body {
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -129,11 +126,10 @@ body {
 }
 
 .nav-links a {
-  text-decoration: none;
   color: var(--accent);
   font-weight: 500;
   transition: var(--transition);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
@@ -145,22 +141,22 @@ body {
 /* ===== HERO SECTION ===== */
 .hero-section {
   background: var(--accent);
-  padding: 4rem 2rem;
+  padding-block: 4rem;
+  padding-inline: 2rem;
 }
 
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  place-items: center;
   gap: 2rem;
   max-width: 75rem;
-  margin: auto;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .hero-img {
   width: 11.25rem;
-  height: 11.25rem;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
   border: 0.25rem solid var(--primary);
@@ -173,13 +169,14 @@ body {
 
 .hero-text h1 {
   color: var(--light);
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 .accent-btn {
   background: var(--primary);
   color: var(--light);
-  padding: 0.75rem 1.5rem;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
   border: none;
   border-radius: 0.25rem;
   text-decoration: none;
@@ -200,14 +197,14 @@ body {
 
 .section-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-block-end: 3rem;
   position: relative;
   color: var(--primary);
 }
 
 .section-title span {
   background: var(--background);
-  padding: 0 1.5rem;
+  padding-inline: 1.5rem;
   position: relative;
   z-index: 1;
 }
@@ -215,9 +212,8 @@ body {
 .section-title::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
+  inset-block: 50%;
+  inset-inline: 0;
   height: 0.125rem;
   background: var(--accent);
   z-index: 0;
@@ -244,11 +240,10 @@ body {
   padding-inline: 1rem;
 }
 
-/* ===== SHARED CARD STYLE ===== */
+/* ===== CARD STYLE ===== */
 .portfolio-card {
   background: var(--highlight);
-  padding-block: 1.5rem;
-  padding-inline: 1.5rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   text-align: center;
   box-shadow: var(--shadow);
@@ -264,18 +259,17 @@ body {
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
-/* ===== PROJECT / CERT IMAGE ===== */
+/* ===== IMAGES ===== */
 .project-img,
 .cert-img {
   width: 100%;
-  max-width: 100%;
   object-fit: contain;
   image-rendering: crisp-edges;
   border-radius: 0.25rem;
   margin-block-end: 1rem;
 }
 
-/* ===== BUTTONS & GROUPING ===== */
+/* ===== BUTTON GROUPS ===== */
 .btn {
   background: var(--accent);
   color: white;
@@ -285,7 +279,6 @@ body {
   padding-block: 0.6rem;
   padding-inline: 1.2rem;
   border-radius: 0.25rem;
-  text-decoration: none;
   font-weight: 500;
   transition: var(--transition);
   margin-block: 0.5rem;
@@ -304,42 +297,16 @@ body {
   margin-block-start: auto;
 }
 
-.btn-group .btn {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.project-btn {
-  background: var(--accent);
-  color: var(--light);
-  width: 100%;
-}
-
-.project-btn:hover {
-  background: var(--accent-dark);
-}
-
-.data-btn {
-  background: var(--data-color);
-  color: white;
-}
+.project-btn { background: var(--accent); }
+.data-btn { background: var(--data-color); }
+.web-btn { background: var(--web-color); }
+.cert-btn { background: var(--accent); }
 
 .data-btn:hover {
-  background: #c31d6c;
+  background: hsl(328, 71%, 41%;
 }
-.web-btn {
-  background: var(--web-color);
-  color: white;
-}
-
 .web-btn:hover {
-  background: #3a9bbf;
-}
-
-.cert-btn {
-  background: var(--accent);
-  color: white;
+  background: hsl(195, 56%, 50%);
 }
 
 /* ===== CV SECTION ===== */
@@ -352,7 +319,7 @@ body {
 
 .cv-card {
   background: var(--highlight);
-  border: 1px solid #ddd;
+  border: 1px solid hsl(0, 0%, 87%);;
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -361,14 +328,10 @@ body {
   margin-inline: auto;
 }
 
-.cv-preview {
-  position: relative;
-}
-
 .cv-image {
   width: 100%;
   border-radius: 0.375rem;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 .cv-buttons {
@@ -378,21 +341,12 @@ body {
   margin-block-start: 1rem;
 }
 
-.cv-overlay {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
 .cv-btn {
   display: inline-block;
   padding-block: 0.6rem;
   padding-inline: 1rem;
   background-color: var(--accent);
-  color: white;
+  color: var(--light);
   border: none;
   border-radius: 0.25rem;
   font-weight: bold;
@@ -405,12 +359,12 @@ body {
 }
 
 .cv-details {
-  margin-top: 1rem;
+  margin-block-start: 1rem;
 }
 
 .cv-highlights {
   list-style: none;
-  padding-inline-start: 0;
+  padding: 0;
   text-align: left;
   margin-block-start: 0.5rem;
 }
@@ -434,18 +388,27 @@ body {
   padding-inline: 2rem;
 }
 
-.github-btn { background: #333; color: white; }
-.linkedin-btn { background: #0a66c2; color: white; }
-.kaggle-btn { background: #20deff; color: white; }
-.email-btn { background: var(--accent); color: white; }
+.github-btn { background: hsl(0, 0%, 20%; }
+.linkedin-btn { background: hsl(210, 85%, 40%); }
+.kaggle-btn { background: hsl(190, 100%, 60%); }
+.email-btn { background: var(--accent); }
 
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding-block: 1rem;
-  padding-inline: 1rem;
   background: var(--primary);
   color: var(--light);
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -456,8 +419,7 @@ body {
   }
 
   .hero-content {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
 
   .btn-group {
@@ -471,9 +433,5 @@ body {
 
   .cv-overlay {
     flex-direction: column;
-  }
-
-  .nav-lights {
-    justify-content: center;
   }
 }
