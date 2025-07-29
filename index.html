@@ -1,186 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Collen | Data Analyst & Web Developer</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=inter:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Sticky Navigation Bar -->
-     <header class="header">
-      <nav class="navbar">
-        <div class="logo">Ben Collen</div>
-        <ul class="nav-links">
-          <li><a href="#web-dev"><i class="fas fa-code"></i> Web Dev</a></li>
-          <li><a href="#data-analyst"><i class="fas fa-chart-bar"></i> Data Analyst</a></li>
-          <li><a href="#cv"><i class="fas fa-file"></i> CV</a></li>
-          <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-      </nav>
-     </header>
+<!-- HEADER -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-     <main>
-      <!-- Hero Section -->
-       <section class="hero-section">
-        <div class="hero-content">
-          <img src="assets/ben_portfolio.jpeg" alt="Ben Collen" class="hero-img">
-          <div class="hero-text">
-            <h1>Hi, I'm Ben Collen</h1>
-            <p>I'm a self-taught data analyst and web developer based in the UK.  I enjoy turning data into insights and building sleek, funcctional websites.  Welcome to my portfolio.</p>
-            <a href="#contact" class="btn accent-btn">Get in touch</a>
-          </div>
-        </div>
-      </section>
+<!-- HERO SECTION -->
+<section id="hero" class="hero-content container">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Aspiring Data Analyst & Web Developer</p>
+  <div class="btn-group">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="/cv.html" class="btn">View CV</a>
+  </div>
+</section>
 
-      <!-- Web Development Section -->
-       <section id="web-dev" class="section web-section">
-        <h2 class="section-title"><span>Web Development</span></h2>
-        <div class="projects-grid">
-          <!-- Project cards will go here -->
-           <div class="project-card portfolio-card">
-            <img src="assets/portfolio_screenshot.png" alt="Screenshot of Ben's Portfolio Website" class="project-img">
-            <h3>Portfolio Website</h3>
-            <p>A responsive and modern personal website built from scratch using HTML, CSS, and JavaScript.</p>
-            <div class="project-buttons">
-              <a href="https://irons28.github.io/portfolio/" class="btn web-btn" target="_blank">
-                <i class="fab fa-globe"></i>View live
-              </a>
-              <a href="https://github.com/irons28/portfolio" class="btn web-btn" target="_blank">
-                <i class="fab fa-github"></i>View Code
-              </a>
-            </div>
-          </div>
-        </div>
-       </section>
+<!-- PROJECT SECTIONS -->
+<div class="container">
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1" class="project-img" />
+        <h3>Project One</h3>
+        <p>Description of the first project goes here.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2" class="project-img" />
+        <h3>Project Two</h3>
+        <p>Description of the second project goes here.</p>
+      </div>
+    </div>
+  </section>
 
-       <!-- Data Analyst Section -->
-       <section id="data-analyst" class="section data-section">
-        <h2 class="section-title"><span>Data Analyst</span></h2>
-        <div class="projects-grid">
-          <!-- Project cards will go here -->
-           <div class="project-card data-project portfolio-card">
-            <img src="assets/cyclistic_slide1.png" alt="project thumbnail" class="project-img">
-            <h3>Cyclistic Capstone Case Study</h3>
-            <p>Analyzed Divvy bike-share data using R.  Identified trends to support marketing strategies.</p>
-            <div class="btn-group">
-              <a href="https://github.com/irons28/cyclistic_capstone/blob/main" class="btn data-btn" target="_blank"><i class="fas fa-chart-line"></i> View Case Study</a>
-              <a href="assets/Cyclistic_Capstone_Presentation.pdf" class="btn data-btn" target="_blank"><i class="fas fa-slideshare"></i> View Presentation</a>
-            </div>
-           </div>
-       </section>
+  <section class="data-section">
+    <h2 class="section-title">Data Analysis</h2>
+    <!-- Content goes here -->
+  </section>
 
-       <!-- Projects Section -->
-        <section id="projects" class="section projects-section">
-          <h2 class="section-title"><span>My Projects</span></h2>
-          <div class="projects-grid">
-            <!-- Project cards will go here -->
-            <div class="project-card">
-              <img src="assets/element-stone-cover.png" alt="Toby and the Element Stone" class="project-img">
-              <div class="project-content">
-                <h3>Toby and the Element Stone</h3>
-                <p>A creative digital storybook built in collaboration with my son.  Features original artwork and interactive web layout.</p>
-                <a href="storybook.html" class="btn" target="_blank">
-                  <i class="fas fa-book-open"></i> Read the Storybook
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+  <section class="web-section">
+    <h2 class="section-title">Web Development</h2>
+    <!-- Content goes here -->
+  </section>
+</div>
 
-       <!-- CV Section -->
-       <section id="cv" class="section cv-section">
-         <h2 class="section-title"><span>My CV</span></h2>
-       <div class="cv-card">
-         <img src="assets/data-analyst-cv-screenshot.png" alt="CV Preview" class="cv-image">
-
-         <div class="cv-details">
-           <h3>Professional Summary</h3>
-           <ul> class="cv-highlights">
-             <li><i class="fas fa-check"></i> Data Analysis (Python, R, SQL)</li>
-             <li><i class="fas fa-check"></i> Web Development (HTML/CSS/JS)</li>
-             <li><i class="fas fa-check"></i> Data Visualization (Tableau,)</li>
-             <li><i class="fas fa-check"></i>Machine Learning Fundamentals</li>
-           </ul>
-         </div>
-  
-         <div class="cv-buttons">
-           <a href="cv.html" target="_blank" class="btn cv-btn">
-             <i class="fas fa-eye"></i> View Full Cv
-           </a>
-           <a href="cv.html" download class="btn cv-btn">
-             <i class="fas fa-file-pdf"></i>Download PDF
-           </a>
-         </div>
-       </div>
-
-       <!-- Certifications Section -->
-       <section id="certifications" class="section cert-section">
-        <h2 class="section-title"><span>Certifications</span></h2>
-        <div class="cert-grid">
-          
-          <!-- Certification cards will go here -->
-          <!-- Google Certificate -->
-          <div class="cert-card portfolio-card">
-            <img src="assets/google-data-analytics-badge.png" alt="Google Data Analytics Badge" class="cert-img">
-            <p><strong>Google Data Analytics</strong><br/>Coursera / Credly</p>
-            <a href="assets/Google Data Analytics Certificate.pdf" target="_blank" class="btn cert-btn">View Credential</a>
-          </div>
-
-          <!-- Relational Database -->
-          <div class="cert-card portfolio-card">
-            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Badge" class="cert-img">
-            <p><strong>Relational Database</strong><br/>freeCodeCamp</p>
-            <a href="https://freecodecamp.org/certification/Bencollen/relational-database-v8" target="_blank" class="btn cert-btn">View Certificate</a>
-          </div>
-          
-          <!-- JavaScript Algorithms -->
-          <div class="cert-card portfolio-card">
-            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Badge" class="cert-img">
-            <p><strong>JavaScript Algorithms and Data Structures</strong><br/>freeCodeCamp</p>
-            <a href="https://freecodecamp.org/certification/Bencollen/javascript-algorithms-and-data-structures-v8" target="_blank" class="btn cert-btn">View Certificate</a>
-          </div>
-          
-          <!-- Responsive Web Design -->
-          <div class="cert-card portfolio-card">
-            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Badge" class="cert-img">
-            <p><strong>Responsive Web Design</strong><br/>freeCodeCamp</p>
-            <a href="https://freecodecamp.org/certification/Bencollen/responsive-web-design-v8" target="_blank" class="btn cert-btn">View Certificate</a>
-          </div>
-        </div>
-       </section>
-
-       <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-          <h2 class="section-title"><span>Get In Touch</span></h2>
-          <div class="contact-links">
-            <a href="https://github.com/irons28" class="btn github-btn">
-              <i class="fas fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/in/ben-collen-234566a1" class="btn linkedin-btn">
-              <i class="fas fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://kaggle.com/bencollen" class="btn kaggle-btn">
-              <i class="fas fa-kaggle"></i> Kaggle
-            </a>
-            <a href="mailto:ben.collen@me.com" class="btn email-btn">
-              <i class="fas fa-envelope"></i> Email Me
-            </a>
-          </div>
-        </section>
-     </main>
-
-     <footer class="footer">
-      <p>&copy; <span id="year"></span> Ben Collen. All rights reserved.</p>
-     </footer>
-
-     <script>
-      // Auto-update year and add scroll effect to navbar
-      document.getElementById('year').textContent =  new Date().getFullYear();
-
-     </script>
-  </body>
-</html>
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Ben Collen. All rights reserved.</p>
+</footer>
